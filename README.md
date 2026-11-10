@@ -52,6 +52,10 @@ Film has always been a craft of many hands, and those hands have had to learn ea
 
 Automate the repeated steps once, and making films becomes what it should have been all along: a question of imagination, not endurance.
 
+## A note on the product stage
+
+The product stage is a proof of concept. It shows, visually, how Studio is meant to look and feel, and it is not yet a finished product. Once there is a clear picture of what the product should look like, it will be rebuilt on standard frameworks and put through proper evaluation and security audits. Until then, treat the interface as a sketch.
+
 ---
 
 **Technical details** (how to run it, the workflow gates, listening, where things live, and what is not built yet): see [docs/technical.md](docs/technical.md).
