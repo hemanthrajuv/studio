@@ -1,0 +1,130 @@
+{
+  "films_root": "/Volumes/ok/story/short_films",
+  "writing": {
+    "model": "opus",
+    "effort": "high",
+    "per_action": {
+      "premise": "opus",
+      "draft": "opus",
+      "critique": "opus",
+      "breakdown": "opus",
+      "card": "sonnet"
+    }
+  },
+  "catalog": [
+    {
+      "id": "qwen-image-2.1",
+      "label": "Qwen-Image 2.1",
+      "kind": "image",
+      "role": "generate",
+      "lane": "local",
+      "wired": false,
+      "note": "dev box. Research licence \u2014 non-commercial, drafts only. 2 refs measured 25.6 GB on a 5090."
+    },
+    {
+      "id": "qwen-image-2.1-edit",
+      "label": "Qwen-Image 2.1 Edit",
+      "kind": "image",
+      "role": "edit",
+      "lane": "local",
+      "wired": false,
+      "note": "dev box. Fix a draft instead of rerolling it."
+    },
+    {
+      "id": "krea2",
+      "label": "Krea 2 Turbo",
+      "kind": "image",
+      "role": "generate",
+      "lane": "local",
+      "wired": false,
+      "note": "dev box, measured 20s at 1024x1824."
+    },
+    {
+      "id": "nano-banana-2.1",
+      "label": "Nano Banana 2.1",
+      "kind": "image",
+      "role": "generate",
+      "lane": "kie",
+      "wired": false,
+      "note": "multi-reference identity."
+    },
+    {
+      "id": "gpt-image-2.5-sunburst",
+      "label": "GPT Image 2.5 Sunburst",
+      "kind": "image",
+      "role": "generate",
+      "lane": "kie",
+      "wired": false,
+      "note": ""
+    },
+    {
+      "id": "grok-imagine-2.1",
+      "label": "Grok Imagine 2.1",
+      "kind": "video",
+      "role": "i2v",
+      "lane": "kie",
+      "wired": false,
+      "note": "cheap motion check. Keep it if it holds up."
+    },
+    {
+      "id": "minimax-h3",
+      "label": "MiniMax H3",
+      "kind": "video",
+      "role": "i2v",
+      "lane": "local",
+      "wired": false,
+      "note": "dev box, video + native audio, turbo LoRA 6\u20138 steps."
+    },
+    {
+      "id": "wan-3.0",
+      "label": "Wan 3.0",
+      "kind": "video",
+      "role": "i2v",
+      "lane": "kie",
+      "wired": false,
+      "note": "API only \u2014 no open weights."
+    },
+    {
+      "id": "seedance-2.0-fast",
+      "label": "Seedance 2.0 Fast",
+      "kind": "video",
+      "role": "i2v",
+      "lane": "kie",
+      "wired": false,
+      "note": ""
+    }
+  ],
+  "tiers": {
+    "image": {
+      "draft": [
+        "qwen-image-2.1",
+        "qwen-image-2.1-edit"
+      ],
+      "final": [
+        "nano-banana-2.1",
+        "gpt-image-2.5-sunburst"
+      ]
+    },
+    "video": {
+      "draft": [
+        "grok-imagine-2.1"
+      ],
+      "final": [
+        "grok-imagine-2.1",
+        "minimax-h3",
+        "wan-3.0",
+        "seedance-2.0-fast"
+      ]
+    }
+  },
+  "resolution": {
+    "draft_video": "480p",
+    "final_strategy": "720p-upscale",
+    "strategies": {
+      "480p-upscale": "Generate 480p, upscale to delivery",
+      "720p-upscale": "Generate 720p, upscale to delivery",
+      "1080p-native": "Generate 1080p directly",
+      "4k-native": "Generate 4K directly"
+    }
+  }
+}
