@@ -61,3 +61,7 @@ The product stage is a proof of concept. It shows, visually, how Studio is meant
 **Technical details** (how to run it, the workflow gates, listening, where things live, and what is not built yet): see [docs/technical.md](docs/technical.md).
 
 *Status: Start through Pre-production and References are built. Generation is next.*
+
+## License
+
+Licensed under the [Apache License 2.0](LICENSE). Third-party code in `web/vendor/` keeps its own MIT license. Models that Studio can call are governed by their own licenses.
